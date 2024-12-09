@@ -5,6 +5,7 @@ import { Sequelize } from "sequelize";
 import { UserFactory } from "./user.js";
 import { TicketFactory } from "./ticket.js";
 
+// @ts-ignore
 let sequelize;
 
 if (process.env.DB_URL) {
@@ -12,7 +13,6 @@ if (process.env.DB_URL) {
 } else {
   sequelize = new Sequelize(
     // @ts-ignore
-
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PW,
